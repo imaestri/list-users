@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desafio_01</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <section class="section" id="section-one">
+        <div class="container">
+            <div class="columns is-mobile is-centered">
+                <div class="column is-half">
+                    <div class="field">
+                        <label class="label is-small">Search</label>
+                        <p id="waitMessage">Aguarde..</p>
+                        <div class="control has-icons-left has-icons-right">
+                            <div></div>
+                            <input class="input is-success is-small" id="mainInput" type="text"
+                                placeholder="Search user.." value="">
+                            <br> <br>
+                            <div id="buttonSearch"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="section-two">
+        <div class="container">
+            <div class="columns is-mobile">
+                <div class="column"></div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-content" id="cardUsers">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-content" id="cardStatistics">
+                            <div>
+                                <h1>Estatísticas</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
