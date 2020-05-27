@@ -11,14 +11,15 @@ let cardStatistics = null;
 let btnFunction = null;
 
 let allUsers = [];
+let userAdd = [];
 let allStatisticsUser = [];
 
-window.addEventListener("load", () => {  
+window.addEventListener("load", () => {
   mainInput = document.getElementById("mainInput");
   cardUsers = document.getElementById("cardUsers");
   cardStatistics = document.getElementById("cardStatistics");
   btnFunction = document.getElementById("buttonSearch");
-  
+
   render();
   fetchUsers();
 });
@@ -37,7 +38,32 @@ async function fetchUsers() {
       gender: gender,
     };
   });
-  console.log(allUsers);
 }
 
-function render() {}
+function render() {
+  waitForm();
+  getInput();
+}
+
+function waitForm() {
+  setTimeout(() => {
+    document.getElementById("loadingMessage").textContent = "";
+  }, 1000);
+}
+
+
+function getInput() {
+  mainInput.addEventListener("input", (e) => {
+    userAdd = allUsers
+      .filter(
+        (users) =>
+          users.name.toLowerCase().indexOf(mainInput.value.toLowerCase()) !== -1
+      )
+      .sort((a, b) => {
+        return a.name.localeCompare(b.name);
+      });
+    // console.log(userAdd);
+    // userCount = userAdd.length;
+    // console.log(userCount);
+  });
+}

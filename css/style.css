@@ -9,9 +9,12 @@
 
 .columns{
     background-color: gainsboro;
+    border-radius: 30px;
 }
 
 
 .card{
     background-color: rgb(255, 255, 255);
+    border-radius: 30px;
 }
+
