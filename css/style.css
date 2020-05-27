@@ -18,3 +18,31 @@
     border-radius: 30px;
 }
 
+
+img{
+    border-radius: 30px;
+}
+
+#count-users{
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: .5em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+#users-statistics{
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: .5em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+
+li{
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: .5em;
+    padding-bottom: 2em;
+}
