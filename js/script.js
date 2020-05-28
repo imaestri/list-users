@@ -1,5 +1,5 @@
 // declarando as variáveis globais
-
+let userCount = 0;
 let totalAge = 0;
 let ageAvg = 0;
 let countGenderM = 0;
@@ -61,6 +61,9 @@ function getInput() {
       .sort((a, b) => {
         return a.name.localeCompare(b.name);
       });
+
+      userCount = userAdd.length;
+
     // console.log(userAdd);
    
     // console.log(userCount);
@@ -85,23 +88,22 @@ function addListStatistics() {
     }, 0) / userCount;
   // console.log(ageAvg);
 
-  totalGenderM = userAdd.filter((users) => {
+  countGenderM = userAdd.filter((users) => {
     return users.gender === "male";
   }).length;
 
-  totalGenderF = userAdd.filter((users) => {
+  countGenderF = userAdd.filter((users) => {
     return users.gender === "female";
   }).length;
 
   // console.log(totalGenderM);
   // console.log(totalGenderF);
+  renderListStatistics();
 }
 
 
 
 function renderlistUsers() {
-  let userCount = userAdd.length;  
-
   let usersListHTML = `
     <div>
     <p id="count-users" >${userCount} usuário(s) encontrado(s)</p>
@@ -110,7 +112,7 @@ function renderlistUsers() {
   `;
 
   userAdd.forEach((users) => {
-    const { name, picture, age, gender } = users;
+    const { name, picture, age } = users;
 
     let userListHTML = `
       <div class = "cardUsers">
@@ -118,7 +120,7 @@ function renderlistUsers() {
         <div>
           <img src="${picture}" alt="${name}">
           <ul>
-            <li> ${name}, ${age}, ${gender}. </li>
+            <li> ${name}, ${age}. </li>
           </ul>
         </div>
       </div>
@@ -131,26 +133,21 @@ function renderlistUsers() {
 }
 
 function renderListStatistics(){
-    let usersStatisticsHTML = `
-        <div>
-        <p id="users-statistics" > Estatísticas </p>
-        <br>
-        </div>
-  `;
-
-  userAdd.forEach((users)=>{
-      let userStatisticsHTML = `
-      <div class = "cardStatistics">
-        <ul>
-            <li>Soma das idades: ${totalAge} </li>
-            <li>Média das idades: ${ageAvg} </li>
-            <li>Sexo masculino: ${totalGenderM} </li>
-            <li>Sexo feminino: ${totalGenderF}  </li>
-        </ul>
-      </div>
-      `;
-      usersStatisticsHTML +=  userStatisticsHTML;
-  });
-  cardStatistics.innerHTML = usersStatisticsHTML;
-}
-
+          cardStatistics.innerHTML = `
+          <div class = "cardStatistics">
+            <div>  
+            <div>
+              <p id="users-statistics" > Estatísticas </p>
+              <br>
+            </div>        
+              <ul>
+                <li> Soma das idades: ${totalAge}</li>
+                <li> Média das idades: ${new Intl.NumberFormat().format(ageAvg)} </li>
+                <li> Sexo masculino: ${countGenderM} </li>
+                <li> Sexo feminino: ${countGenderF} </li>
+              </ul>
+            </div>
+          </div>
+        `;
+        }
+        
