@@ -47,7 +47,7 @@ function render() {
 function waitForm() {
   setTimeout(() => {
     document.getElementById("loadingMessage").textContent = "";
-  }, 5000);
+  }, 2000);
 
 }
 
