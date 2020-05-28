@@ -16,12 +16,16 @@
             <div class="columns is-mobile is-centered">
                 <div class="column is-half">
                     <div class="field">
-                        <label class="label is-small id="label-search"">Buscar</label>
-                        <p id="loadingMessage">Aguarde..</p>
+                        <label class="label is-small" id="label-search">Listando usuários</label>
+                        <div id="loadingMessage">
+                            <progress class="progress is-small is-success" max="100"></progress>
+                        </div>
+                        <br>
                         <div class="control has-icons-left has-icons-right">
-                            <div></div>
+                            <div id="">
                                 <input class="input is-rounded is-small" id="mainInput" type="text" value="">
-                            <br> <br>
+                            </div>
+                                <br> <br>
                             <div id="buttonSearch"></div>
                         </div>
                     </div>
@@ -42,8 +46,8 @@
                 <div class="column">
                     <div class="card">
                         <div class="card-content" id="cardStatistics">
-                           <p id="users-statistics">Estatísticas</p>
-                           <br>
+                            <p id="users-statistics">Estatísticas</p>
+                            <br>
                         </div>
                     </div>
                 </div>
@@ -55,3 +59,5 @@
 </body>
 
 </html>
+
+

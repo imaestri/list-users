@@ -1,14 +1,8 @@
-#section-one{
-    background-color: whitesmoke;
-}
 
-#section-two{
-    background-color: whitesmoke;
-}
 
 
 .columns{
-    background-color: gainsboro;
+    background-color: whitesmoke;
     border-radius: 30px;
 }
 
@@ -45,4 +39,19 @@ li{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: .5em;
     padding-bottom: 2em;
+}
+
+#label-search{
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: .5em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+
+#loadingMessage{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: tomato;
+    border-radius: 3px;
 }

@@ -47,7 +47,8 @@ function render() {
 function waitForm() {
   setTimeout(() => {
     document.getElementById("loadingMessage").textContent = "";
-  }, 1000);
+  }, 5000);
+
 }
 
 
@@ -82,8 +83,7 @@ function addListStatistics() {
   }, 0);
   // console.log(totalAge);
 
-  ageAvg =
-    userAdd.reduce((accumulator, current) => {
+  ageAvg = userAdd.reduce((accumulator, current) => {
       return accumulator + current.age;
     }, 0) / userCount;
   // console.log(ageAvg);
