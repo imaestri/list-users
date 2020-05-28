@@ -153,3 +153,4 @@ function renderListStatistics(){
   });
   cardStatistics.innerHTML = usersStatisticsHTML;
 }
+
