@@ -1,2 +1,2 @@
-# list-users-api
+# list-users
 Studying API requests with js. IGTI bootcamp challenge.
